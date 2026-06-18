@@ -165,13 +165,13 @@
     </div>
     <div class="card-body">
       <label class="form-label">Full Name</label>
-      <input class="form-input" id="reg-name" type="text" placeholder="e.g. Priya Sharma" autocomplete="name">
+      <input class="form-input" id="reg-name" type="text" placeholder="Enter your full name" autocomplete="name">
       <div class="error-msg" id="err-name"></div>
       <label class="form-label">Email Address</label>
-      <input class="form-input" id="reg-email" type="email" placeholder="priya@example.com" autocomplete="email">
+      <input class="form-input" id="reg-email" type="email" placeholder="Enter your email address" autocomplete="email">
       <div class="error-msg" id="err-email"></div>
       <label class="form-label">Mobile Number</label>
-      <input class="form-input" id="reg-phone" type="tel" placeholder="+91 98765 43210" autocomplete="tel">
+      <input class="form-input" id="reg-phone" type="tel" placeholder="Enter your mobile number" autocomplete="tel">
       <div class="error-msg" id="err-phone"></div>
       <button class="btn btn-primary" id="btn-register">Continue to Quiz &rarr;</button>
     </div>
@@ -533,7 +533,6 @@
     state.name = name; state.email = email; state.phone = phone;
     state.currentQ = 0; state.answers = []; state.selectedChoice = null;
     document.getElementById('quiz-user-label').textContent = 'Hello, ' + name.split(' ')[0] + '! 10 Questions Await';
-    saveToSheet({ name: name, email: email, phone: phone, timestamp: new Date().toISOString(), genre: '' });
     renderQuestion();
     goToScreen('screen-quiz');
   }
