@@ -542,10 +542,10 @@
      Replace the text inside the quotes with your URL.
      Example: 'https://script.google.com/macros/s/ABC123.../exec'
   ════════════════════════════════════════════════ */
-  var SHEET_URL = 'https://script.google.com/macros/s/AKfycbxze0ZA1hGTWZvRDssHnCRwjLx5MTZq79ViAEychJc1k02uaHprVAr3kP2ZOrUnMhc_/exec';
+  var SHEET_URL = 'https://script.google.com/macros/s/AKfycbyP7VXKpD_wAby2fXidv_MUtdvrqZbgesCKjQq4J6ryUUP08rMI0c1YekqESj5UjV0h/exec';
 
   function saveToSheet(data) {
-    if (SHEET_URL === 'https://script.google.com/macros/s/AKfycbxze0ZA1hGTWZvRDssHnCRwjLx5MTZq79ViAEychJc1k02uaHprVAr3kP2ZOrUnMhc_/exec') return; // skip until URL is set
+    if (SHEET_URL === 'YOUR_GOOGLE_APPS_SCRIPT_URL') return; // skip until URL is set
     fetch(SHEET_URL, {
       method: 'POST',
       mode: 'no-cors',
