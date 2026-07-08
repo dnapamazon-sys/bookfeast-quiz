@@ -299,7 +299,7 @@
 <script>
 (function () {
   /* ── DATA ── */
-var questions = [
+  var questions = [
   {
     q: "Which title would make you pick up a book first? / எந்த தலைப்பு உங்களை முதலில் புத்தகம் எடுக்கத் தூண்டும்?",
     choices: [
@@ -371,8 +371,67 @@ var questions = [
       { text: "A leadership guide / தலைமை வழிகாட்டி", genre: "business" },
       { text: "A book of poems / கவிதைத் தொகுப்பு", genre: "romance" }
     ]
-  }
-];
+  },
+  {
+    q: "Which word attracts you the most? / எந்த சொல் உங்களை அதிகம் கவர்கிறது?",
+    choices: [
+      { text: "Mystery / மர்மம்", genre: "mystery" },
+      { text: "Knowledge / அறிவு", genre: "biography" },
+      { text: "Success / வெற்றி", genre: "business" },
+      { text: "Emotion / உணர்ச்சி", genre: "romance" }
+    ]
+  },
+  {
+    q: "Which character do you admire most? / நீங்கள் அதிகம் பாராட்டும் கதாபாத்திரம் எது?",
+    choices: [
+      { text: "Detective / டிடெக்டிவ்", genre: "mystery" },
+      { text: "Teacher / ஆசிரியர்", genre: "biography" },
+      { text: "Entrepreneur / தொழில்முனைவோர்", genre: "business" },
+      { text: "Artist / கலைஞர்", genre: "romance" }
+    ]
+  },
+  {
+    q: "Which headline would you click first? / நீங்கள் முதலில் எந்த தலைப்பைத் திறப்பீர்கள்?",
+    choices: [
+      { text: "The Case That Shocked Everyone / அனைவரையும் அதிர்ச்சியடையச் செய்த வழக்கு", genre: "mystery" },
+      { text: "The Story That Changed History / வரலாற்றை மாற்றிய கதை", genre: "biography" },
+      { text: "From Zero to CEO / பூஜ்யத்திலிருந்து தலைமை அதிகாரி வரை", genre: "business" },
+      { text: "The Love That Waited Forever / என்றென்றும் காத்திருந்த காதல்", genre: "romance" }
+    ]
+  },
+  {
+    q: "Which problem would you enjoy solving? / எந்த பிரச்சினையைத் தீர்க்க உங்களுக்கு விருப்பம்?",
+    choices: [
+      { text: "A hidden clue / மறைந்த குறிப்பு", genre: "mystery" },
+      { text: "A real-life challenge / உண்மையான வாழ்க்கை சவால்", genre: "biography" },
+      { text: "Growing a business / வியாபாரத்தை வளர்த்தல்", genre: "business" },
+      { text: "Bringing people together / மக்களை ஒன்றிணைத்தல்", genre: "romance" }
+    ]
+  },
+  {
+    q: "Which book would you finish in one day? / ஒரே நாளில் நீங்கள் எந்த புத்தகத்தை முடிப்பீர்கள்?",
+    choices: [
+      { text: "Suspense Novel / மர்ம நாவல்", genre: "mystery" },
+      { text: "Inspirational Story / ஊக்கமளிக்கும் கதை", genre: "biography" },
+      { text: "Business & Self-Growth / வியாபாரம் மற்றும் சுய வளர்ச்சி", genre: "business" },
+      { text: "Romance Novel / காதல் நாவல்", genre: "romance" }
+    ]
+  },
+  {
+    q: "What keeps you turning the pages? / எதைப் பார்த்து நீங்கள் தொடர்ந்து வாசிப்பீர்கள்?",
+    choices: [
+      { text: "Unexpected twists / எதிர்பாராத திருப்பங்கள்", genre: "mystery" },
+      { text: "Learning something new / புதியதை கற்றுக்கொள்வது", genre: "biography" },
+      { text: "Practical ideas / நடைமுறை யோசனைகள்", genre: "business" },
+      { text: "Emotional connection / உணர்ச்சி பிணைப்பு", genre: "romance" }
+    ]
+  },
+  {
+    q: "Which feeling do you want after reading a book? / ஒரு புத்தகத்தை வாசித்த பின் நீங்கள் எந்த உணர்வை விரும்புகிறீர்கள்?",
+    choices: [
+      { text: "Excited / உற்சாகம்", genre: "mystery" },
+      { text: "Inspired / ஊக்கம்", genre: "biography" },
+      { text: "Motivated / தூண்ட
 
 
   var genres = {
