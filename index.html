@@ -299,98 +299,81 @@
 <script>
 (function () {
   /* ── DATA ── */
-  var questions = [
-    {
-      q: "You have a free evening. What are you most drawn to?",
-      choices: [
-        { text: "Solving a tricky puzzle or riddle", genre: "mystery" },
-        { text: "Exploring a magical new world", genre: "fantasy" },
-        { text: "Reading about real people who changed history", genre: "biography" },
-        { text: "Feeling the rush of an adrenaline-packed story", genre: "thriller" }
-      ]
-    },
-    {
-      q: "Which setting sounds most appealing to you?",
-      choices: [
-        { text: "A foggy Victorian street with secret passages", genre: "mystery" },
-        { text: "An enchanted forest with mythical creatures", genre: "fantasy" },
-        { text: "A research lab during a groundbreaking discovery", genre: "biography" },
-        { text: "A high-stakes espionage safe house", genre: "thriller" }
-      ]
-    },
-    {
-      q: "What kind of protagonist do you root for?",
-      choices: [
-        { text: "A sharp detective who notices every detail", genre: "mystery" },
-        { text: "A young hero discovering hidden powers", genre: "fantasy" },
-        { text: "A real visionary who overcame all odds", genre: "biography" },
-        { text: "An underdog agent fighting against the clock", genre: "thriller" }
-      ]
-    },
-    {
-      q: "Choose a vibe that fits your mood:",
-      choices: [
-        { text: "Curious & analytical — I love piecing things together", genre: "mystery" },
-        { text: "Whimsical & imaginative — I love impossible things", genre: "fantasy" },
-        { text: "Reflective & inspired — I love learning from life", genre: "biography" },
-        { text: "Intense & alert — I love edge-of-seat tension", genre: "thriller" }
-      ]
-    },
-    {
-      q: "What do you want to feel at the end of a book?",
-      choices: [
-        { text: "Satisfied — all the pieces finally clicked", genre: "mystery" },
-        { text: "Transported — I visited another dimension", genre: "fantasy" },
-        { text: "Motivated — I want to go change the world", genre: "biography" },
-        { text: "Relieved — the hero survived by a hair", genre: "thriller" }
-      ]
-    },
-    {
-      q: "Pick a movie night genre:",
-      choices: [
-        { text: "Whodunit mystery or noir thriller", genre: "mystery" },
-        { text: "Fantasy epic or animated adventure", genre: "fantasy" },
-        { text: "Historical drama or biographical film", genre: "biography" },
-        { text: "Action spy or political conspiracy", genre: "thriller" }
-      ]
-    },
-    {
-      q: "Your ideal book opening line?",
-      choices: [
-        { text: "The body was discovered at dawn, with no footprints in the snow.", genre: "mystery" },
-        { text: "Beyond the silver mountains lay a kingdom no map had ever named.", genre: "fantasy" },
-        { text: "She was born with nothing. She died a legend.", genre: "biography" },
-        { text: "He had twelve hours to stop the bomb — and he had lost the address.", genre: "thriller" }
-      ]
-    },
-    {
-      q: "Which quality do you admire most in a story?",
-      choices: [
-        { text: "A perfectly hidden twist revealed at the right moment", genre: "mystery" },
-        { text: "Rich, immersive world-building with deep lore", genre: "fantasy" },
-        { text: "Authenticity — it really happened", genre: "biography" },
-        { text: "Non-stop pacing that won't let you put it down", genre: "thriller" }
-      ]
-    },
-    {
-      q: "Which phrase speaks to you most?",
-      choices: [
-        { text: "The truth is always stranger than fiction.", genre: "mystery" },
-        { text: "Not all those who wander are lost.", genre: "fantasy" },
-        { text: "Well-behaved women seldom make history.", genre: "biography" },
-        { text: "Trust no one. Verify everything.", genre: "thriller" }
-      ]
-    },
-    {
-      q: "Finally — what draws you to books above all?",
-      choices: [
-        { text: "The intellectual thrill of uncovering hidden truths", genre: "mystery" },
-        { text: "Escaping into worlds beyond imagination", genre: "fantasy" },
-        { text: "Learning from extraordinary human journeys", genre: "biography" },
-        { text: "Living a dangerous adventure from the safety of my couch", genre: "thriller" }
-      ]
-    }
-  ];
+var questions = [
+  {
+    q: "Which title would make you pick up a book first? / எந்த தலைப்பு உங்களை முதலில் புத்தகம் எடுக்கத் தூண்டும்?",
+    choices: [
+      { text: "The Secret Behind the Locked Door / பூட்டப்பட்ட கதவின் ரகசியம்", genre: "mystery" },
+      { text: "A Life That Changed the World / உலகை மாற்றிய ஒரு வாழ்க்கை", genre: "biography" },
+      { text: "Build Your Dream Business / உங்கள் கனவு வியாபாரத்தை உருவாக்குங்கள்", genre: "business" },
+      { text: "A Letter Never Sent / அனுப்பப்படாத கடிதம்", genre: "romance" }
+    ]
+  },
+  {
+    q: "You're the main character. Which journey are you choosing? / நீங்களே கதாநாயகன். எந்த பயணத்தைத் தேர்வு செய்வீர்கள்?",
+    choices: [
+      { text: "Solve a mystery / மர்மத்தை தீர்க்க", genre: "mystery" },
+      { text: "Change society / சமூகத்தை மாற்ற", genre: "biography" },
+      { text: "Build a successful company / வெற்றிகரமான நிறுவனம் அமைக்க", genre: "business" },
+      { text: "Find true love / உண்மையான காதலை கண்டுபிடிக்க", genre: "romance" }
+    ]
+  },
+  {
+    q: "Which ending would make you happiest? / எந்த முடிவு உங்களுக்கு மகிழ்ச்சியளிக்கும்?",
+    choices: [
+      { text: "The mystery is solved / மர்மம் தீர்க்கப்பட்டது", genre: "mystery" },
+      { text: "Everyone learns an important lesson / அனைவரும் முக்கியமான பாடம் கற்றுக்கொள்கிறார்கள்", genre: "biography" },
+      { text: "The dream becomes reality / கனவு நனவாகிறது", genre: "business" },
+      { text: "The characters reunite / கதாபாத்திரங்கள் மீண்டும் ஒன்று சேர்கிறார்கள்", genre: "romance" }
+    ]
+  },
+  {
+    q: "If you had one free day, what would you do? / ஒரு விடுமுறை நாள் கிடைத்தால், நீங்கள் என்ன செய்வீர்கள்?",
+    choices: [
+      { text: "Explore an unknown place / தெரியாத இடத்தை ஆராய", genre: "mystery" },
+      { text: "Learn a new skill / புதிய திறனை கற்றுக்கொள்", genre: "biography" },
+      { text: "Plan a business idea / வியாபார யோசனையை திட்டமிடு", genre: "business" },
+      { text: "Spend time with loved ones / அன்பானவர்களுடன் நேரம் செலவிடு", genre: "romance" }
+    ]
+  },
+  {
+    q: "Which movie would you watch tonight? / இன்றிரவு நீங்கள் எந்த திரைப்படத்தைப் பார்ப்பீர்கள்?",
+    choices: [
+      { text: "Thriller / திகில் படம்", genre: "mystery" },
+      { text: "Biography / வாழ்க்கை வரலாறு", genre: "biography" },
+      { text: "Business Success Story / வியாபார வெற்றி கதை", genre: "business" },
+      { text: "Romantic Drama / காதல் நாடகம்", genre: "romance" }
+    ]
+  },
+  {
+    q: "Which quote inspires you the most? / எந்த மேற்கோள் உங்களை அதிகம் ஊக்குவிக்கிறது?",
+    choices: [
+      { text: "\"Every mystery has an answer.\" / \"ஒவ்வொரு மர்மத்திற்கும் ஒரு பதில் உண்டு.\"", genre: "mystery" },
+      { text: "\"Knowledge changes lives.\" / \"அறிவு வாழ்க்கையை மாற்றுகிறது.\"", genre: "biography" },
+      { text: "\"Success starts with one idea.\" / \"வெற்றி ஒரு யோசனையிலிருந்து தொடங்குகிறது.\"", genre: "business" },
+      { text: "\"Love changes everything.\" / \"காதல் அனைத்தையும் மாற்றுகிறது.\"", genre: "romance" }
+    ]
+  },
+  {
+    q: "Which place would you like to visit? / நீங்கள் எந்த இடத்திற்குச் செல்ல விரும்புகிறீர்கள்?",
+    choices: [
+      { text: "An old castle / பழைய கோட்டை", genre: "mystery" },
+      { text: "A famous historical site / புகழ்பெற்ற வரலாற்று இடம்", genre: "biography" },
+      { text: "A global business city / உலக வியாபார நகரம்", genre: "business" },
+      { text: "A peaceful beach / அமைதியான கடற்கரை", genre: "romance" }
+    ]
+  },
+  {
+    q: "Which gift would you choose? / நீங்கள் எந்த பரிசைத் தேர்வு செய்வீர்கள்?",
+    choices: [
+      { text: "A detective kit / ஒரு டிடெக்டிவ் கருவி", genre: "mystery" },
+      { text: "A history collection / வரலாற்று தொகுப்பு", genre: "biography" },
+      { text: "A leadership guide / தலைமை வழிகாட்டி", genre: "business" },
+      { text: "A book of poems / கவிதைத் தொகுப்பு", genre: "romance" }
+    ]
+  }
+];
+
 
   var genres = {
     mystery: {
