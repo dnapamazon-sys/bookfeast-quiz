@@ -25,17 +25,17 @@
   @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
   .card{background:var(--parchment);border-radius:18px;overflow:hidden;
     box-shadow:0 24px 80px rgba(0,0,0,.55),0 0 0 1px rgba(200,134,10,.18);}
-  .card-header{background:var(--ink);padding:28px 28px 22px;text-align:center;
+  .card-header{background:var(--ink);padding:22px 24px 18px;text-align:center;
     border-bottom:2px solid var(--amber);position:relative;}
   .card-header::after{content:'';position:absolute;bottom:-1px;left:50%;
     transform:translateX(-50%);width:60px;height:3px;background:var(--gold);border-radius:2px;}
-  .logo-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:6px;}
-  .logo-icon{font-size:28px;}
-  .logo-text{font-family:'Playfair Display',serif;font-size:22px;font-weight:900;
+  .logo-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:4px;}
+  .logo-icon{font-size:26px;}
+  .logo-text{font-family:'Playfair Display',serif;font-size:20px;font-weight:900;
     color:var(--gold);letter-spacing:2px;text-transform:uppercase;}
   .card-subtitle{font-family:'Space Mono',monospace;font-size:10px;
     color:var(--amber);letter-spacing:3px;text-transform:uppercase;}
-  .card-body{padding:28px;}
+  .card-body{padding:22px;}
   .form-label{display:block;font-size:11px;font-weight:600;color:var(--deep);
     letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px;}
   .form-input{width:100%;padding:13px 16px;border:1.5px solid var(--blush);
@@ -44,94 +44,100 @@
     transition:border-color .2s,box-shadow .2s;outline:none;}
   .form-input:focus{border-color:var(--amber);box-shadow:0 0 0 3px rgba(200,134,10,.12);}
   .form-input.error{border-color:#c0392b;}
-  .error-msg{font-size:12px;color:#c0392b;min-height:18px;margin-bottom:10px;padding-left:4px;}
-  .btn{width:100%;padding:15px;border:none;border-radius:12px;
-    font-family:'Playfair Display',serif;font-size:17px;font-weight:700;
+  .error-msg{font-size:12px;color:#c0392b;min-height:18px;margin-bottom:8px;padding-left:4px;}
+  .btn{width:100%;padding:14px;border:none;border-radius:12px;
+    font-family:'Playfair Display',serif;font-size:16px;font-weight:700;
     cursor:pointer;transition:all .2s;letter-spacing:.5px;}
   .btn-primary{background:linear-gradient(135deg,var(--amber),var(--deep));
     color:#fff;box-shadow:0 6px 20px rgba(200,134,10,.35);}
   .btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(200,134,10,.45);}
   .btn-primary:active{transform:translateY(0);}
   .btn-primary:disabled{opacity:.5;cursor:not-allowed;transform:none;}
-  .progress-row{display:flex;align-items:center;gap:12px;margin-bottom:22px;}
+  .progress-row{display:flex;align-items:center;gap:10px;margin-bottom:16px;}
   .progress-bar{flex:1;height:6px;background:var(--blush);border-radius:3px;overflow:hidden;}
   .progress-fill{height:100%;background:linear-gradient(90deg,var(--amber),var(--gold));
     border-radius:3px;transition:width .4s ease;}
   .progress-label{font-family:'Space Mono',monospace;font-size:11px;
     color:var(--amber);white-space:nowrap;}
-  .question-text{font-family:'Playfair Display',serif;font-size:18px;color:var(--ink);
-    line-height:1.5;margin-bottom:20px;font-style:italic;}
-  .choices{display:flex;flex-direction:column;gap:10px;margin-bottom:22px;}
-  .choice-btn{padding:13px 16px;border:1.5px solid var(--blush);border-radius:10px;
-    background:var(--warm);text-align:left;font-family:'Inter',sans-serif;font-size:14px;
-    color:var(--ink);cursor:pointer;transition:all .18s;display:flex;align-items:center;gap:12px;}
-  .choice-btn:hover{border-color:var(--amber);background:#fff8ee;transform:translateX(4px);}
+  .question-text{font-family:'Playfair Display',serif;font-size:15px;color:var(--ink);
+    line-height:1.6;margin-bottom:16px;font-style:italic;}
+  .choices{display:flex;flex-direction:column;gap:8px;margin-bottom:16px;}
+  .choice-btn{padding:11px 14px;border:1.5px solid var(--blush);border-radius:10px;
+    background:var(--warm);text-align:left;font-family:'Inter',sans-serif;font-size:13px;
+    color:var(--ink);cursor:pointer;transition:all .18s;display:flex;align-items:center;
+    gap:10px;line-height:1.4;}
+  .choice-btn:hover{border-color:var(--amber);background:#fff8ee;transform:translateX(3px);}
   .choice-btn.selected{border-color:var(--amber);background:#fff3d6;
     box-shadow:0 2px 12px rgba(200,134,10,.18);}
-  .choice-letter{width:26px;height:26px;border-radius:50%;background:var(--blush);
+  .choice-letter{width:24px;height:24px;border-radius:50%;background:var(--blush);
     display:flex;align-items:center;justify-content:center;font-family:'Space Mono',monospace;
-    font-size:11px;font-weight:700;color:var(--deep);flex-shrink:0;transition:background .18s,color .18s;}
+    font-size:10px;font-weight:700;color:var(--deep);flex-shrink:0;
+    transition:background .18s,color .18s;}
   .choice-btn.selected .choice-letter{background:var(--amber);color:#fff;}
-  .result-badge{text-align:center;padding:28px 0 18px;}
-  .genre-emoji{font-size:64px;margin-bottom:10px;display:block;}
-  .congrats-text{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:3px;
-    color:var(--amber);text-transform:uppercase;margin-bottom:6px;}
-  .genre-name{font-family:'Playfair Display',serif;font-size:32px;font-weight:900;
-    color:var(--ink);margin-bottom:8px;}
-  .genre-desc{font-size:13px;color:#6b5a3e;line-height:1.6;padding:0 8px;}
-  .genre-badge-pill{display:inline-block;padding:8px 22px;border-radius:50px;
-    font-family:'Playfair Display',serif;font-size:15px;font-weight:700;color:#fff;
-    cursor:pointer;margin:16px auto 0;box-shadow:0 4px 16px rgba(0,0,0,.2);
+  .result-badge{text-align:center;padding:20px 0 14px;}
+  .genre-emoji{font-size:56px;margin-bottom:8px;display:block;}
+  .congrats-text{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:3px;
+    color:var(--amber);text-transform:uppercase;margin-bottom:4px;}
+  .genre-name{font-family:'Playfair Display',serif;font-size:26px;font-weight:900;
+    color:var(--ink);margin-bottom:6px;}
+  .genre-desc{font-size:12px;color:#6b5a3e;line-height:1.6;padding:0 6px;}
+  .genre-badge-pill{display:inline-block;padding:8px 20px;border-radius:50px;
+    font-family:'Playfair Display',serif;font-size:14px;font-weight:700;color:#fff;
+    cursor:pointer;margin:14px auto 0;box-shadow:0 4px 16px rgba(0,0,0,.2);
     transition:transform .18s,box-shadow .18s;animation:pulse 2s infinite;}
   .genre-badge-pill:hover{transform:scale(1.05);box-shadow:0 8px 24px rgba(0,0,0,.25);}
   @keyframes pulse{0%,100%{box-shadow:0 4px 16px rgba(0,0,0,.2)}50%{box-shadow:0 4px 28px rgba(200,134,10,.4)}}
-  .books-heading{font-family:'Playfair Display',serif;font-size:14px;color:var(--deep);
-    text-align:center;margin-bottom:16px;font-style:italic;}
-  .book-item{display:flex;align-items:flex-start;gap:14px;padding:14px;
-    background:var(--warm);border-radius:12px;margin-bottom:10px;border:1px solid var(--blush);}
+  .books-heading{font-family:'Playfair Display',serif;font-size:13px;color:var(--deep);
+    text-align:center;margin-bottom:14px;font-style:italic;}
+  .book-item{display:flex;align-items:flex-start;gap:12px;padding:12px;
+    background:var(--warm);border-radius:12px;margin-bottom:8px;border:1px solid var(--blush);}
   .book-rank{font-family:'Space Mono',monospace;font-size:11px;font-weight:700;
-    color:var(--amber);min-width:22px;padding-top:2px;}
-  .book-cover{width:38px;height:52px;border-radius:4px;display:flex;align-items:center;
-    justify-content:center;font-size:22px;flex-shrink:0;}
+    color:var(--amber);min-width:20px;padding-top:2px;}
+  .book-cover{width:36px;height:50px;border-radius:4px;display:flex;align-items:center;
+    justify-content:center;font-size:20px;flex-shrink:0;}
   .book-info{flex:1;}
-  .book-title{font-family:'Playfair Display',serif;font-size:14px;font-weight:700;
+  .book-title{font-family:'Playfair Display',serif;font-size:13px;font-weight:700;
     color:var(--ink);margin-bottom:2px;}
-  .book-author{font-size:12px;color:#8a7355;margin-bottom:4px;}
+  .book-author{font-size:11px;color:#8a7355;margin-bottom:3px;}
   .book-tag{font-family:'Space Mono',monospace;font-size:9px;color:var(--amber);
     letter-spacing:1px;text-transform:uppercase;}
-  .stars{color:var(--gold);font-size:12px;margin-top:3px;}
-  .coupon-box{background:var(--ink);border-radius:14px;padding:24px;text-align:center;
-    position:relative;overflow:hidden;margin-bottom:18px;}
+  .stars{color:var(--gold);font-size:11px;margin-top:2px;}
+  .coupon-box{background:var(--ink);border-radius:14px;padding:20px;text-align:center;
+    position:relative;overflow:hidden;margin-bottom:16px;}
   .coupon-label{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:3px;
-    color:var(--amber);text-transform:uppercase;margin-bottom:10px;}
-  .coupon-code{font-family:'Space Mono',monospace;font-size:30px;font-weight:700;
-    color:var(--gold);letter-spacing:6px;margin-bottom:10px;text-shadow:0 2px 12px rgba(232,184,75,.4);}
-  .coupon-discount{font-family:'Playfair Display',serif;font-size:14px;color:#c8a96e;margin-bottom:4px;}
+    color:var(--amber);text-transform:uppercase;margin-bottom:8px;}
+  .coupon-code{font-family:'Space Mono',monospace;font-size:28px;font-weight:700;
+    color:var(--gold);letter-spacing:6px;margin-bottom:8px;
+    text-shadow:0 2px 12px rgba(232,184,75,.4);}
+  .coupon-discount{font-family:'Playfair Display',serif;font-size:13px;color:#c8a96e;margin-bottom:4px;}
   .coupon-validity{font-size:11px;color:#6b5e3e;}
-  .dashed-border{border:2px dashed rgba(200,134,10,.3);border-radius:14px;padding:3px;margin-bottom:18px;}
-  .stall-box{background:linear-gradient(135deg,#fff8ee,var(--warm));border:1.5px solid var(--blush);
-    border-radius:12px;padding:18px;margin-bottom:18px;}
+  .dashed-border{border:2px dashed rgba(200,134,10,.3);border-radius:14px;
+    padding:3px;margin-bottom:16px;}
+  .stall-box{background:linear-gradient(135deg,#fff8ee,var(--warm));
+    border:1.5px solid var(--blush);border-radius:12px;padding:16px;margin-bottom:16px;}
   .stall-heading{font-family:'Playfair Display',serif;font-size:14px;font-weight:700;
-    color:var(--ink);margin-bottom:12px;display:flex;align-items:center;gap:8px;}
-  .stall-row{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--blush);}
+    color:var(--ink);margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+  .stall-row{display:flex;align-items:center;gap:10px;padding:7px 0;
+    border-bottom:1px solid var(--blush);}
   .stall-row:last-child{border-bottom:none;}
-  .stall-icon{font-size:16px;width:24px;text-align:center;}
+  .stall-icon{font-size:15px;width:22px;text-align:center;}
   .stall-detail{font-size:13px;color:var(--ink);line-height:1.4;}
   .stall-detail strong{color:var(--deep);}
-  .qr-wrap{text-align:center;padding:10px 0 20px;}
+  .qr-wrap{text-align:center;padding:10px 0 16px;}
   #qrcode{display:inline-block;padding:16px;background:#fff;border-radius:12px;
-    box-shadow:0 4px 20px rgba(0,0,0,.12);margin-bottom:14px;}
-  .qr-instruction{font-size:13px;color:#6b5a3e;line-height:1.6;}
-  .qr-url{font-family:'Space Mono',monospace;font-size:11px;color:var(--amber);
+    box-shadow:0 4px 20px rgba(0,0,0,.12);margin-bottom:12px;}
+  .qr-instruction{font-size:13px;color:#6b5a3e;line-height:1.7;}
+  .qr-url{font-family:'Space Mono',monospace;font-size:10px;color:var(--amber);
     margin-top:8px;word-break:break-all;}
-  .divider{height:1px;background:var(--blush);margin:20px 0;}
-  .nav-note{text-align:center;font-size:12px;color:#8a7355;margin-top:14px;}
+  .divider{height:1px;background:var(--blush);margin:16px 0;}
+  .nav-note{text-align:center;font-size:12px;color:#8a7355;margin-top:12px;}
   .copy-btn{font-family:'Space Mono',monospace;font-size:11px;padding:7px 16px;
     border:1px solid var(--amber);border-radius:6px;background:transparent;
-    color:var(--amber);cursor:pointer;margin-top:10px;transition:background .18s,color .18s;}
+    color:var(--amber);cursor:pointer;margin-top:10px;
+    transition:background .18s,color .18s;}
   .copy-btn:hover{background:var(--amber);color:#fff;}
   .thankyou-box{text-align:center;background:#f0faf0;border:1.5px solid #b5d8b0;
-    border-radius:12px;padding:18px;margin-bottom:18px;}
+    border-radius:12px;padding:16px;margin-bottom:16px;}
 </style>
 </head>
 <body>
@@ -140,17 +146,17 @@
 <div id="screen-qr" class="screen active">
   <div class="card">
     <div class="card-header">
-      <div class="logo-row"><span class="logo-icon">📚</span><span class="logo-text">BookFest</span></div>
-      <div class="card-subtitle">2025 Literary Festival</div>
+      <div class="logo-row"><span class="logo-icon">&#x1F4DA;</span><span class="logo-text">BookFest</span></div>
+      <div class="card-subtitle">DNA Publications &middot; 2026</div>
     </div>
     <div class="card-body">
       <div class="qr-wrap">
         <div id="qrcode"></div>
-        <p class="qr-instruction">Scan this QR code with your mobile<br>to begin your Book Genre Journey!</p>
+        <p class="qr-instruction">Scan this QR code with your mobile<br>to begin your Book Genre Journey!<br><br>&#x1F4F1; QR குறியீட்டை ஸ்கேன் செய்து தொடங்குங்கள்!</p>
         <p class="qr-url" id="qr-url-label"></p>
       </div>
       <div class="divider"></div>
-      <button class="btn btn-primary" id="btn-start">&#9654; Start Here on This Device</button>
+      <button class="btn btn-primary" id="btn-start">&#9654; Start Here / இங்கே தொடங்குங்கள்</button>
       <p class="nav-note">Or scan the QR code above with your phone</p>
     </div>
   </div>
@@ -160,20 +166,20 @@
 <div id="screen-register" class="screen">
   <div class="card">
     <div class="card-header">
-      <div class="logo-row"><span class="logo-icon">📚</span><span class="logo-text">BookFest</span></div>
-      <div class="card-subtitle">Tell us who you are</div>
+      <div class="logo-row"><span class="logo-icon">&#x1F4DA;</span><span class="logo-text">BookFest</span></div>
+      <div class="card-subtitle">Register / பதிவு செய்யுங்கள்</div>
     </div>
     <div class="card-body">
-      <label class="form-label">Full Name</label>
+      <label class="form-label">Full Name / பெயர்</label>
       <input class="form-input" id="reg-name" type="text" placeholder="Enter your full name" autocomplete="name">
       <div class="error-msg" id="err-name"></div>
-      <label class="form-label">Email Address</label>
+      <label class="form-label">Email Address / மின்னஞ்சல்</label>
       <input class="form-input" id="reg-email" type="email" placeholder="Enter your email address" autocomplete="email">
       <div class="error-msg" id="err-email"></div>
-      <label class="form-label">Mobile Number</label>
+      <label class="form-label">Mobile Number / கைபேசி எண்</label>
       <input class="form-input" id="reg-phone" type="tel" placeholder="Enter your mobile number" autocomplete="tel">
       <div class="error-msg" id="err-phone"></div>
-      <button class="btn btn-primary" id="btn-register">Continue to Quiz &rarr;</button>
+      <button class="btn btn-primary" id="btn-register">Continue to Quiz / வினாடியிடம் தொடங்க &rarr;</button>
     </div>
   </div>
 </div>
@@ -182,17 +188,17 @@
 <div id="screen-quiz" class="screen">
   <div class="card">
     <div class="card-header">
-      <div class="logo-row"><span class="logo-icon">📖</span><span class="logo-text">Genre Quiz</span></div>
-      <div class="card-subtitle" id="quiz-user-label">10 Questions &middot; Find Your Genre</div>
+      <div class="logo-row"><span class="logo-icon">&#x1F4D6;</span><span class="logo-text">Genre Quiz</span></div>
+      <div class="card-subtitle" id="quiz-user-label">15 Questions &middot; Find Your Genre</div>
     </div>
     <div class="card-body">
       <div class="progress-row">
-        <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:10%"></div></div>
-        <span class="progress-label" id="progress-label">1 / 10</span>
+        <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:7%"></div></div>
+        <span class="progress-label" id="progress-label">1 / 15</span>
       </div>
       <p class="question-text" id="question-text"></p>
       <div class="choices" id="choices-container"></div>
-      <button class="btn btn-primary" id="next-btn" disabled>Next &rarr;</button>
+      <button class="btn btn-primary" id="next-btn" disabled>Next / அடுத்தது &rarr;</button>
     </div>
   </div>
 </div>
@@ -201,8 +207,8 @@
 <div id="screen-result" class="screen">
   <div class="card">
     <div class="card-header">
-      <div class="logo-row"><span class="logo-icon">🎉</span><span class="logo-text">BookFest</span></div>
-      <div class="card-subtitle">Your Genre Revealed!</div>
+      <div class="logo-row"><span class="logo-icon">&#x1F389;</span><span class="logo-text">BookFest</span></div>
+      <div class="card-subtitle">Your Genre Revealed! / உங்கள் வகை கண்டறியப்பட்டது!</div>
     </div>
     <div class="card-body">
       <div class="result-badge">
@@ -213,7 +219,7 @@
         <br>
         <div id="result-pill" class="genre-badge-pill"></div>
       </div>
-      <p class="nav-note" style="margin-top:6px;">Click the badge above to see your top 5 books &uarr;</p>
+      <p class="nav-note" style="margin-top:6px;">Click the badge to see your Top 5 Books &uarr;</p>
     </div>
   </div>
 </div>
@@ -222,14 +228,14 @@
 <div id="screen-books" class="screen">
   <div class="card">
     <div class="card-header">
-      <div class="logo-row"><span class="logo-icon">📚</span><span class="logo-text">Your Reads</span></div>
+      <div class="logo-row"><span class="logo-icon">&#x1F4DA;</span><span class="logo-text">Your Reads</span></div>
       <div class="card-subtitle" id="books-subtitle">Top 5 Picks For You</div>
     </div>
     <div class="card-body">
       <p class="books-heading" id="books-heading">Based on your genre, here are must-reads:</p>
       <div id="books-list"></div>
       <div class="divider"></div>
-      <button class="btn btn-primary" id="btn-coupon">🎁 Claim Your Coupon Code</button>
+      <button class="btn btn-primary" id="btn-coupon">&#x1F381; Claim Your Coupon / கூப்பன் பெறுங்கள்</button>
     </div>
   </div>
 </div>
@@ -238,59 +244,59 @@
 <div id="screen-coupon" class="screen">
   <div class="card">
     <div class="card-header">
-      <div class="logo-row"><span class="logo-icon">🎟️</span><span class="logo-text">Your Reward</span></div>
+      <div class="logo-row"><span class="logo-icon">&#x1F39F;&#xFE0F;</span><span class="logo-text">Your Reward</span></div>
       <div class="card-subtitle">Exclusive BookFest Offer</div>
     </div>
     <div class="card-body">
       <div class="dashed-border">
         <div class="coupon-box">
-          <div class="coupon-label">🎁 Your Exclusive Coupon</div>
+          <div class="coupon-label">&#x1F381; Your Exclusive Coupon</div>
           <div class="coupon-code" id="coupon-code">BOOK25</div>
-          <div class="coupon-discount" id="coupon-discount">25% OFF on all purchases at your genre stall</div>
-          <div class="coupon-validity">Valid: 27&ndash;28 June 2025 &middot; BookFest Hall A</div>
+          <div class="coupon-discount" id="coupon-discount">10% OFF on all purchases at DNA Publications</div>
+          <div class="coupon-validity">Valid at BookFest 2026 &middot; DNA Publications</div>
           <br>
-          <button class="copy-btn" id="btn-copy">📋 Copy Code</button>
+          <button class="copy-btn" id="btn-copy">&#x1F4CB; Copy Code</button>
         </div>
       </div>
       <div class="stall-box">
-        <div class="stall-heading">📍 Find Your Stall</div>
+        <div class="stall-heading">&#x1F4CD; Find Us / எங்களை கண்டுபிடியுங்கள்</div>
         <div class="stall-row">
-          <span class="stall-icon">🏷️</span>
-          <div class="stall-detail"><strong>Stall Name:</strong> <span id="stall-name"></span></div>
+          <span class="stall-icon">&#x1F3F7;&#xFE0F;</span>
+          <div class="stall-detail"><strong>Stall Name:</strong> DNA PUBLICATIONS</div>
         </div>
         <div class="stall-row">
-          <span class="stall-icon">🔢</span>
-          <div class="stall-detail"><strong>Stall Number:</strong> <span id="stall-number"></span></div>
+          <span class="stall-icon">&#x1F522;</span>
+          <div class="stall-detail"><strong>Stall Number:</strong> Hall B &nbsp;143 &amp; 144</div>
         </div>
         <div class="stall-row">
-          <span class="stall-icon">🏢</span>
-          <div class="stall-detail"><strong>Hall:</strong> <span id="stall-hall"></span></div>
+          <span class="stall-icon">&#x1F3E2;</span>
+          <div class="stall-detail"><strong>Hall:</strong> Hall B</div>
         </div>
         <div class="stall-row">
-          <span class="stall-icon">🕐</span>
-          <div class="stall-detail"><strong>Open:</strong> 9:00 AM &ndash; 8:00 PM (Both Days)</div>
+          <span class="stall-icon">&#x1F550;</span>
+          <div class="stall-detail"><strong>Open:</strong> 9:00 AM &ndash; 8:00 PM</div>
         </div>
         <div class="stall-row">
-          <span class="stall-icon">📞</span>
-          <div class="stall-detail"><strong>Help Desk:</strong> +91 98765 00001</div>
+          <span class="stall-icon">&#x1F4DE;</span>
+          <div class="stall-detail"><strong>Help Desk:</strong> +91 75986 91689</div>
         </div>
         <div class="stall-row">
-          <span class="stall-icon">💳</span>
+          <span class="stall-icon">&#x1F4B3;</span>
           <div class="stall-detail"><strong>Payment:</strong> Cash, UPI, Cards Accepted</div>
         </div>
       </div>
       <div class="thankyou-box">
-        <div style="font-size:24px;margin-bottom:6px;">🌟</div>
-        <div style="font-family:'Playfair Display',serif;font-size:15px;font-weight:700;color:var(--green);margin-bottom:4px;">
+        <div style="font-size:22px;margin-bottom:6px;">&#x1F31F;</div>
+        <div style="font-family:'Playfair Display',serif;font-size:14px;font-weight:700;color:var(--green);margin-bottom:4px;">
           Thank You, <span id="final-name">Reader</span>!
         </div>
         <div style="font-size:12px;color:#4a7a44;line-height:1.6;">
-          Show this coupon at the stall to redeem your discount.<br>
-          Happy reading &amp; enjoy BookFest 2025! 📖
+          Show this coupon at DNA Publications stall to redeem your discount.<br>
+          Happy reading &amp; Enjoy BookFest 2026! &#x1F4D6;
         </div>
       </div>
       <button class="btn btn-primary" id="btn-restart" style="background:linear-gradient(135deg,#2d5a27,#1a3a18);">
-        &#8635; Take Quiz Again
+        &#8635; Take Quiz Again / மீண்டும் வினாடியுங்கள்
       </button>
     </div>
   </div>
@@ -298,309 +304,328 @@
 
 <script>
 (function () {
-  /* ── DATA ── */
+
+  /* ══════════════════════════════════════════
+     6 GENRES:
+     mystery | thriller | selfhelp | spiritual | romance | fantasy
+     15 questions x 4 choices (A/B/C rotated across 6 genres fairly)
+     Each genre appears exactly 10 times across all 60 choices
+  ══════════════════════════════════════════ */
+
   var questions = [
-  {
-    q: "Which title would make you pick up a book first? / எந்த தலைப்பு உங்களை முதலில் புத்தகம் எடுக்கத் தூண்டும்?",
-    choices: [
-      { text: "The Secret Behind the Locked Door / பூட்டப்பட்ட கதவின் ரகசியம்", genre: "mystery" },
-      { text: "A Life That Changed the World / உலகை மாற்றிய ஒரு வாழ்க்கை", genre: "biography" },
-      { text: "Build Your Dream Business / உங்கள் கனவு வியாபாரத்தை உருவாக்குங்கள்", genre: "business" },
-      { text: "A Letter Never Sent / அனுப்பப்படாத கடிதம்", genre: "romance" }
-    ]
-  },
-  {
-    q: "You're the main character. Which journey are you choosing? / நீங்களே கதாநாயகன். எந்த பயணத்தைத் தேர்வு செய்வீர்கள்?",
-    choices: [
-      { text: "Solve a mystery / மர்மத்தை தீர்க்க", genre: "mystery" },
-      { text: "Change society / சமூகத்தை மாற்ற", genre: "biography" },
-      { text: "Build a successful company / வெற்றிகரமான நிறுவனம் அமைக்க", genre: "business" },
-      { text: "Find true love / உண்மையான காதலை கண்டுபிடிக்க", genre: "romance" }
-    ]
-  },
-  {
-    q: "Which ending would make you happiest? / எந்த முடிவு உங்களுக்கு மகிழ்ச்சியளிக்கும்?",
-    choices: [
-      { text: "The mystery is solved / மர்மம் தீர்க்கப்பட்டது", genre: "mystery" },
-      { text: "Everyone learns an important lesson / அனைவரும் முக்கியமான பாடம் கற்றுக்கொள்கிறார்கள்", genre: "biography" },
-      { text: "The dream becomes reality / கனவு நனவாகிறது", genre: "business" },
-      { text: "The characters reunite / கதாபாத்திரங்கள் மீண்டும் ஒன்று சேர்கிறார்கள்", genre: "romance" }
-    ]
-  },
-  {
-    q: "If you had one free day, what would you do? / ஒரு விடுமுறை நாள் கிடைத்தால், நீங்கள் என்ன செய்வீர்கள்?",
-    choices: [
-      { text: "Explore an unknown place / தெரியாத இடத்தை ஆராய", genre: "mystery" },
-      { text: "Learn a new skill / புதிய திறனை கற்றுக்கொள்", genre: "biography" },
-      { text: "Plan a business idea / வியாபார யோசனையை திட்டமிடு", genre: "business" },
-      { text: "Spend time with loved ones / அன்பானவர்களுடன் நேரம் செலவிடு", genre: "romance" }
-    ]
-  },
-  {
-    q: "Which movie would you watch tonight? / இன்றிரவு நீங்கள் எந்த திரைப்படத்தைப் பார்ப்பீர்கள்?",
-    choices: [
-      { text: "Thriller / திகில் படம்", genre: "mystery" },
-      { text: "Biography / வாழ்க்கை வரலாறு", genre: "biography" },
-      { text: "Business Success Story / வியாபார வெற்றி கதை", genre: "business" },
-      { text: "Romantic Drama / காதல் நாடகம்", genre: "romance" }
-    ]
-  },
-  {
-    q: "Which quote inspires you the most? / எந்த மேற்கோள் உங்களை அதிகம் ஊக்குவிக்கிறது?",
-    choices: [
-      { text: "\"Every mystery has an answer.\" / \"ஒவ்வொரு மர்மத்திற்கும் ஒரு பதில் உண்டு.\"", genre: "mystery" },
-      { text: "\"Knowledge changes lives.\" / \"அறிவு வாழ்க்கையை மாற்றுகிறது.\"", genre: "biography" },
-      { text: "\"Success starts with one idea.\" / \"வெற்றி ஒரு யோசனையிலிருந்து தொடங்குகிறது.\"", genre: "business" },
-      { text: "\"Love changes everything.\" / \"காதல் அனைத்தையும் மாற்றுகிறது.\"", genre: "romance" }
-    ]
-  },
-  {
-    q: "Which place would you like to visit? / நீங்கள் எந்த இடத்திற்குச் செல்ல விரும்புகிறீர்கள்?",
-    choices: [
-      { text: "An old castle / பழைய கோட்டை", genre: "mystery" },
-      { text: "A famous historical site / புகழ்பெற்ற வரலாற்று இடம்", genre: "biography" },
-      { text: "A global business city / உலக வியாபார நகரம்", genre: "business" },
-      { text: "A peaceful beach / அமைதியான கடற்கரை", genre: "romance" }
-    ]
-  },
-  {
-    q: "Which gift would you choose? / நீங்கள் எந்த பரிசைத் தேர்வு செய்வீர்கள்?",
-    choices: [
-      { text: "A detective kit / ஒரு டிடெக்டிவ் கருவி", genre: "mystery" },
-      { text: "A history collection / வரலாற்று தொகுப்பு", genre: "biography" },
-      { text: "A leadership guide / தலைமை வழிகாட்டி", genre: "business" },
-      { text: "A book of poems / கவிதைத் தொகுப்பு", genre: "romance" }
-    ]
-  },
-  {
-    q: "Which word attracts you the most? / எந்த சொல் உங்களை அதிகம் கவர்கிறது?",
-    choices: [
-      { text: "Mystery / மர்மம்", genre: "mystery" },
-      { text: "Knowledge / அறிவு", genre: "biography" },
-      { text: "Success / வெற்றி", genre: "business" },
-      { text: "Emotion / உணர்ச்சி", genre: "romance" }
-    ]
-  },
-  {
-    q: "Which character do you admire most? / நீங்கள் அதிகம் பாராட்டும் கதாபாத்திரம் எது?",
-    choices: [
-      { text: "Detective / டிடெக்டிவ்", genre: "mystery" },
-      { text: "Teacher / ஆசிரியர்", genre: "biography" },
-      { text: "Entrepreneur / தொழில்முனைவோர்", genre: "business" },
-      { text: "Artist / கலைஞர்", genre: "romance" }
-    ]
-  },
-  {
-    q: "Which headline would you click first? / நீங்கள் முதலில் எந்த தலைப்பைத் திறப்பீர்கள்?",
-    choices: [
-      { text: "The Case That Shocked Everyone / அனைவரையும் அதிர்ச்சியடையச் செய்த வழக்கு", genre: "mystery" },
-      { text: "The Story That Changed History / வரலாற்றை மாற்றிய கதை", genre: "biography" },
-      { text: "From Zero to CEO / பூஜ்யத்திலிருந்து தலைமை அதிகாரி வரை", genre: "business" },
-      { text: "The Love That Waited Forever / என்றென்றும் காத்திருந்த காதல்", genre: "romance" }
-    ]
-  },
-  {
-    q: "Which problem would you enjoy solving? / எந்த பிரச்சினையைத் தீர்க்க உங்களுக்கு விருப்பம்?",
-    choices: [
-      { text: "A hidden clue / மறைந்த குறிப்பு", genre: "mystery" },
-      { text: "A real-life challenge / உண்மையான வாழ்க்கை சவால்", genre: "biography" },
-      { text: "Growing a business / வியாபாரத்தை வளர்த்தல்", genre: "business" },
-      { text: "Bringing people together / மக்களை ஒன்றிணைத்தல்", genre: "romance" }
-    ]
-  },
-  {
-    q: "Which book would you finish in one day? / ஒரே நாளில் நீங்கள் எந்த புத்தகத்தை முடிப்பீர்கள்?",
-    choices: [
-      { text: "Suspense Novel / மர்ம நாவல்", genre: "mystery" },
-      { text: "Inspirational Story / ஊக்கமளிக்கும் கதை", genre: "biography" },
-      { text: "Business & Self-Growth / வியாபாரம் மற்றும் சுய வளர்ச்சி", genre: "business" },
-      { text: "Romance Novel / காதல் நாவல்", genre: "romance" }
-    ]
-  },
-  {
-    q: "What keeps you turning the pages? / எதைப் பார்த்து நீங்கள் தொடர்ந்து வாசிப்பீர்கள்?",
-    choices: [
-      { text: "Unexpected twists / எதிர்பாராத திருப்பங்கள்", genre: "mystery" },
-      { text: "Learning something new / புதியதை கற்றுக்கொள்வது", genre: "biography" },
-      { text: "Practical ideas / நடைமுறை யோசனைகள்", genre: "business" },
-      { text: "Emotional connection / உணர்ச்சி பிணைப்பு", genre: "romance" }
-    ]
-  },
-  {
-    q: "Which feeling do you want after reading a book? / ஒரு புத்தகத்தை வாசித்த பின் நீங்கள் எந்த உணர்வை விரும்புகிறீர்கள்?",
-    choices: [
-      { text: "Excited / உற்சாகம்", genre: "mystery" },
-      { text: "Inspired / ஊக்கம்", genre: "biography" },
-      { text: "Motivated / தூண்ட
+    {
+      q: "Which title would make you pick up a book first? / எந்த தலைப்பு உங்களை முதலில் புத்தகம் எடுக்கத் தூண்டும்?",
+      choices: [
+        { text: "The Secret Behind the Locked Door / பூட்டப்பட்ட கதவின் ரகசியம்",   genre: "mystery"  },
+        { text: "The Hunt Begins at Midnight / நள்ளிரவில் வேட்டை தொடங்குகிறது",      genre: "thriller" },
+        { text: "Awaken Your Inner Power / உங்கள் உள்ளார்ந்த சக்தியை விழிப்படையுங்கள்", genre: "selfhelp" },
+        { text: "A Letter Never Sent / அனுப்பப்படாத கடிதம்",                          genre: "romance"  }
+      ]
+    },
+    {
+      q: "You are the main character. Which journey are you on? / நீங்களே கதாநாயகன். எந்த பயணத்தில் இருக்கிறீர்கள்?",
+      choices: [
+        { text: "Uncover a hidden truth / மறைந்த உண்மையை கண்டுபிடி",               genre: "mystery"   },
+        { text: "Survive a deadly conspiracy / உயிர் அபாயமான சதியில் இருந்து தப்பி", genre: "thriller"  },
+        { text: "Find your soul's purpose / உங்கள் ஆன்மாவின் நோக்கத்தை கண்டுபிடி", genre: "spiritual" },
+        { text: "Quest through an enchanted land / மாயமான நிலத்தில் பயணி",          genre: "fantasy"   }
+      ]
+    },
+    {
+      q: "Which ending would make you happiest? / எந்த முடிவு உங்களுக்கு மகிழ்ச்சியளிக்கும்?",
+      choices: [
+        { text: "The mystery is finally solved / மர்மம் இறுதியாக தீர்க்கப்பட்டது",   genre: "mystery"  },
+        { text: "The villain is caught just in time / கடைசி நிமிடத்தில் வில்லன் பிடிக்கப்பட்டான்", genre: "thriller" },
+        { text: "The hero finds inner peace / கதாநாயகன் மன அமைதி கண்டான்",          genre: "selfhelp" },
+        { text: "The two lovers reunite forever / இரு காதலர்களும் என்றும் ஒன்று சேர்கிறார்கள்", genre: "romance" }
+      ]
+    },
+    {
+      q: "If you had one free day, what would you do? / ஒரு விடுமுறை நாள் கிடைத்தால் என்ன செய்வீர்கள்?",
+      choices: [
+        { text: "Solve a puzzle or escape room / புதிர் அல்லது எஸ்கேப் ரூம் தீர்க்க", genre: "mystery"   },
+        { text: "Meditate and connect with God / தியானம் மற்றும் கடவுளுடன் இணைய",    genre: "spiritual" },
+        { text: "Read a self-improvement book / சுய முன்னேற்ற புத்தகம் படிக்க",      genre: "selfhelp"  },
+        { text: "Get lost in a fantasy world / கற்பனை உலகில் தொலைந்து போக",          genre: "fantasy"   }
+      ]
+    },
+    {
+      q: "Which movie would you watch tonight? / இன்றிரவு எந்த திரைப்படம் பார்ப்பீர்கள்?",
+      choices: [
+        { text: "Detective thriller / துப்பறியும் திகில் படம்",         genre: "mystery"   },
+        { text: "Action spy movie / ஆக்சன் உளவாளி படம்",               genre: "thriller"  },
+        { text: "Romantic drama / காதல் நாடக படம்",                     genre: "romance"   },
+        { text: "Epic fantasy adventure / மாபெரும் கற்பனை சாகசம்",      genre: "fantasy"   }
+      ]
+    },
+    {
+      q: "Which quote inspires you most? / எந்த மேற்கோள் உங்களை அதிகம் ஊக்குவிக்கிறது?",
+      choices: [
+        { text: "Every mystery has an answer / ஒவ்வொரு மர்மத்திற்கும் பதில் உண்டு",     genre: "mystery"   },
+        { text: "Trust no one, fear nothing / யாரையும் நம்பாதே, எதையும் பயப்படாதே",    genre: "thriller"  },
+        { text: "Be the change you wish to see / நீ விரும்பும் மாற்றமாக இரு",           genre: "selfhelp"  },
+        { text: "The soul always knows the way / ஆன்மா எப்போதும் வழி அறியும்",          genre: "spiritual" }
+      ]
+    },
+    {
+      q: "Which place would you love to visit? / நீங்கள் எந்த இடம் செல்ல விரும்புகிறீர்கள்?",
+      choices: [
+        { text: "A mysterious old castle / மர்ம பழைய கோட்டை",               genre: "mystery"  },
+        { text: "A secret underground base / ரகசிய நிலத்தடி தளம்",          genre: "thriller" },
+        { text: "A peaceful mountain temple / அமைதியான மலை கோயில்",          genre: "spiritual"},
+        { text: "A magical enchanted forest / மாயமான வனப்பகுதி",             genre: "fantasy"  }
+      ]
+    },
+    {
+      q: "Which gift would you love to receive? / நீங்கள் எந்த பரிசு பெற விரும்புகிறீர்கள்?",
+      choices: [
+        { text: "A detective mystery kit / டிடெக்டிவ் மர்ம கருவி",                     genre: "mystery"  },
+        { text: "A self-help journal / சுய உதவி நாட்குறிப்பு",                          genre: "selfhelp" },
+        { text: "A spiritual scripture / ஆன்மீக வேதம்",                                 genre: "spiritual"},
+        { text: "A beautiful romance novel / அழகான காதல் நாவல்",                        genre: "romance"  }
+      ]
+    },
+    {
+      q: "Which word attracts you most? / எந்த சொல் உங்களை அதிகம் கவர்கிறது?",
+      choices: [
+        { text: "Clue / சாட்சியம்",         genre: "mystery"   },
+        { text: "Danger / ஆபத்து",          genre: "thriller"  },
+        { text: "Growth / வளர்ச்சி",        genre: "selfhelp"  },
+        { text: "Magic / மந்திரம்",         genre: "fantasy"   }
+      ]
+    },
+    {
+      q: "Which character do you admire most? / நீங்கள் அதிகம் பாராட்டும் கதாபாத்திரம் எது?",
+      choices: [
+        { text: "A genius detective / மேதை துப்பறிவாளர்",      genre: "mystery"   },
+        { text: "A fearless secret agent / அச்சமற்ற உளவாளி",   genre: "thriller"  },
+        { text: "A wise spiritual guru / ஞானமுள்ள ஆன்மீக குரு", genre: "spiritual" },
+        { text: "A brave fantasy hero / தைரியமான கற்பனை வீரன்", genre: "fantasy"   }
+      ]
+    },
+    {
+      q: "Which headline would you click first? / நீங்கள் முதலில் எந்த தலைப்பை திறப்பீர்கள்?",
+      choices: [
+        { text: "The Case That Shocked Everyone / அனைவரையும் அதிர்ச்சியடையச் செய்த வழக்கு", genre: "mystery"  },
+        { text: "The Conspiracy Nobody Saw Coming / யாரும் கணிக்காத சதி",                   genre: "thriller" },
+        { text: "How to Transform Your Life in 30 Days / 30 நாட்களில் வாழ்க்கையை மாற்றுவது", genre: "selfhelp" },
+        { text: "The Love That Waited a Lifetime / வாழ்நாள் முழுவதும் காத்திருந்த காதல்",    genre: "romance"  }
+      ]
+    },
+    {
+      q: "What keeps you turning pages? / எதைப் பார்த்து நீங்கள் தொடர்ந்து வாசிப்பீர்கள்?",
+      choices: [
+        { text: "Unexpected plot twists / எதிர்பாராத திருப்பங்கள்",   genre: "mystery"   },
+        { text: "Heart-pounding suspense / இதயத்தை வேகமாக்கும் சஸ்பென்ஸ்", genre: "thriller"  },
+        { text: "Emotional connection / உணர்ச்சி பிணைப்பு",           genre: "romance"   },
+        { text: "Breathtaking magical worlds / மூச்சடைக்கும் மாயமான உலகங்கள்", genre: "fantasy" }
+      ]
+    },
+    {
+      q: "Which book would you finish in one sitting? / ஒரே அமர்வில் எந்த புத்தகத்தை முடிப்பீர்கள்?",
+      choices: [
+        { text: "Suspense mystery novel / சஸ்பென்ஸ் மர்ம நாவல்",       genre: "mystery"   },
+        { text: "High-stakes action thriller / உயர் ஆபத்து ஆக்சன் நாவல்", genre: "thriller"  },
+        { text: "Life-changing self-help book / வாழ்க்கையை மாற்றும் புத்தகம்", genre: "selfhelp" },
+        { text: "Heartfelt romantic story / இதய நிறைவான காதல் கதை",    genre: "romance"   }
+      ]
+    },
+    {
+      q: "What do you seek most in life? / வாழ்க்கையில் நீங்கள் அதிகம் தேடுவது என்ன?",
+      choices: [
+        { text: "Truth and answers / உண்மை மற்றும் பதில்கள்",          genre: "mystery"   },
+        { text: "Inner peace and wisdom / உள்ளார்ந்த அமைதி மற்றும் ஞானம்", genre: "spiritual" },
+        { text: "Love and connection / காதல் மற்றும் பிணைப்பு",         genre: "romance"   },
+        { text: "Wonder and magic / வியப்பு மற்றும் மந்திரம்",          genre: "fantasy"   }
+      ]
+    },
+    {
+      q: "Which feeling do you want after reading a book? / புத்தகம் படித்த பின் எந்த உணர்வை விரும்புகிறீர்கள்?",
+      choices: [
+        { text: "Thrilled — every clue made sense! / அனைத்து துப்புகளும் பொருந்தின!",    genre: "mystery"   },
+        { text: "Relieved — they made it out alive! / அவர்கள் உயிருடன் தப்பித்தனர்!",    genre: "thriller"  },
+        { text: "Empowered — I can change my life! / என் வாழ்க்கையை மாற்றலாம்!",        genre: "selfhelp"  },
+        { text: "Blessed — I feel connected to God / கடவுளுடன் இணைந்த உணர்வு!",         genre: "spiritual" }
+      ]
+    }
+  ];
 
-
+  /* ══════════════════════════════════════
+     GENRES DATA
+  ══════════════════════════════════════ */
   var genres = {
     mystery: {
-      name: "Mystery Reader", emoji: "🔍", color: "#1a3a6b",
-      desc: "You are sharp, observant, and love unraveling secrets. You read between the lines and notice what others miss — the mark of a true mystery connoisseur.",
+      name: "Mystery Reader / மர்ம வாசகர்",
+      emoji: "🔍",
+      color: "#1a3a6b",
+      desc: "You are sharp, observant, and love unraveling secrets. You read between the lines and notice what others miss — a true mystery connoisseur! / நீங்கள் கூர்மையானவர், மர்மங்களை விரும்புகிறீர்கள்!",
       books: [
-        { title: "The Girl with the Dragon Tattoo", author: "Stieg Larsson", emoji: "🐉", tag: "Nordic Noir", stars: 5 },
-        { title: "Gone Girl", author: "Gillian Flynn", emoji: "👤", tag: "Psychological", stars: 5 },
-        { title: "And Then There Were None", author: "Agatha Christie", emoji: "🏝", tag: "Classic Whodunit", stars: 5 },
-        { title: "The Da Vinci Code", author: "Dan Brown", emoji: "🔑", tag: "Conspiracy", stars: 4 },
-        { title: "Big Little Lies", author: "Liane Moriarty", emoji: "🎭", tag: "Domestic Mystery", stars: 4 }
+        { title: "Exit Denied",                      author: "Guhan S",         emoji: "🚪", tag: "Tamil Mystery",    stars: 5 },
+        { title: "Gone Girl",                        author: "Gillian Flynn",   emoji: "👤", tag: "Psychological",    stars: 5 },
+        { title: "And Then There Were None",         author: "Agatha Christie", emoji: "🏝", tag: "Classic Whodunit", stars: 5 },
+        { title: "The Da Vinci Code",                author: "Dan Brown",       emoji: "🔑", tag: "Conspiracy",       stars: 4 },
+        { title: "Big Little Lies",                  author: "Liane Moriarty",  emoji: "🎭", tag: "Domestic Mystery", stars: 4 }
       ],
-      coupon: "MYST25", discount: "25% OFF on Mystery & Crime titles",
-      stall: "Mystery Corner", stallNo: "A-07", hall: "Hall A, Ground Floor"
-    },
-    fantasy: {
-      name: "Fantasy Explorer", emoji: "🧙", color: "#4a1a6b",
-      desc: "You are imaginative, idealistic, and believe in the impossible. Worlds unseen hold more wonder for you than anything ordinary life can offer.",
-      books: [
-        { title: "The Name of the Wind", author: "Patrick Rothfuss", emoji: "🎶", tag: "Epic Fantasy", stars: 5 },
-        { title: "Harry Potter and the Philosopher's Stone", author: "J.K. Rowling", emoji: "⚡", tag: "Magical", stars: 5 },
-        { title: "The Hobbit", author: "J.R.R. Tolkien", emoji: "🗺", tag: "High Fantasy", stars: 5 },
-        { title: "Mistborn", author: "Brandon Sanderson", emoji: "💨", tag: "Magic System", stars: 5 },
-        { title: "The Lies of Locke Lamora", author: "Scott Lynch", emoji: "🃏", tag: "Heist Fantasy", stars: 4 }
-      ],
-      coupon: "FANT25", discount: "25% OFF on Fantasy & Sci-Fi titles",
-      stall: "Realm of Wonder", stallNo: "B-03", hall: "Hall B, First Floor"
-    },
-    biography: {
-      name: "Biography Buff", emoji: "🌟", color: "#7b3f00",
-      desc: "You are grounded, empathetic, and inspired by real human achievement. You find meaning in true stories and the lives of those who dared to make a difference.",
-      books: [
-        { title: "Educated", author: "Tara Westover", emoji: "🎓", tag: "Memoir", stars: 5 },
-        { title: "The Diary of a Young Girl", author: "Anne Frank", emoji: "📓", tag: "Historical", stars: 5 },
-        { title: "Steve Jobs", author: "Walter Isaacson", emoji: "🍎", tag: "Tech Pioneer", stars: 5 },
-        { title: "Becoming", author: "Michelle Obama", emoji: "🌺", tag: "Memoir", stars: 5 },
-        { title: "Man's Search for Meaning", author: "Viktor Frankl", emoji: "💡", tag: "Psychology", stars: 5 }
-      ],
-      coupon: "BIOG25", discount: "25% OFF on Biographies & Memoirs",
-      stall: "True Stories Hub", stallNo: "C-12", hall: "Hall C, Ground Floor"
+      coupon: "MYST25", discount: "10% OFF on Mystery titles",
+      stall: "DNA PUBLICATIONS", stallNo: "Hall B 143 & 144", hall: "Hall B"
     },
     thriller: {
-      name: "Thriller Seeker", emoji: "⚡", color: "#8b1a1a",
-      desc: "You are bold, decisive, and love living on the edge — even through the pages of a book. Fast pacing, hidden dangers, and moral dilemmas are your reading fuel.",
+      name: "Thriller Seeker / சஸ்பென்ஸ் வாசகர்",
+      emoji: "⚡",
+      color: "#8b1a1a",
+      desc: "You are bold, fearless, and love living on the edge. Heart-pounding suspense and action-packed plots are what fuel your reading passion! / நீங்கள் துணிச்சலானவர், சஸ்பென்ஸை விரும்புகிறீர்கள்!",
       books: [
-        { title: "The Bourne Identity", author: "Robert Ludlum", emoji: "🕵", tag: "Spy Thriller", stars: 5 },
-        { title: "I Am Pilgrim", author: "Terry Hayes", emoji: "🌍", tag: "Espionage", stars: 5 },
-        { title: "The Girl on the Train", author: "Paula Hawkins", emoji: "🚂", tag: "Psychological", stars: 5 },
-        { title: "No Country for Old Men", author: "Cormac McCarthy", emoji: "🏜", tag: "Crime Thriller", stars: 5 },
-        { title: "The Firm", author: "John Grisham", emoji: "⚖", tag: "Legal Thriller", stars: 4 }
+        { title: "Arakki Enathu Thegamum Kayamum Neeyadi", author: "Divyashobana",   emoji: "🔥", tag: "Tamil Thriller",  stars: 5 },
+        { title: "Aaraganin Irai Padhumai",                author: "Yash Karmugil",  emoji: "⚔",  tag: "Tamil Thriller",  stars: 5 },
+        { title: "The Girl on the Train",                  author: "Paula Hawkins",  emoji: "🚂", tag: "Psychological",   stars: 5 },
+        { title: "No Country for Old Men",                 author: "Cormac McCarthy",emoji: "🏜", tag: "Crime Thriller",  stars: 5 },
+        { title: "The Firm",                               author: "John Grisham",   emoji: "⚖",  tag: "Legal Thriller",  stars: 4 }
       ],
-      coupon: "THRL25", discount: "25% OFF on Thrillers & Action titles",
-      stall: "Pulse Point", stallNo: "A-15", hall: "Hall A, Ground Floor"
+      coupon: "THRL25", discount: "10% OFF on Thriller titles",
+      stall: "DNA PUBLICATIONS", stallNo: "Hall B 143 & 144", hall: "Hall B"
+    },
+    selfhelp: {
+      name: "Self-Help Seeker / சுய உதவி வாசகர்",
+      emoji: "🌱",
+      color: "#1a5c1a",
+      desc: "You are driven, growth-oriented, and always striving to be better. You find power in knowledge and use every book as a tool to transform your life! / நீங்கள் வளர்ச்சியை நோக்கி பயணிக்கிறீர்கள்!",
+      books: [
+        { title: "Atomic Habits",                   author: "James Clear",              emoji: "⚛", tag: "Habits",       stars: 5 },
+        { title: "The Teen Decoder",                author: "Dr. S Sreejana",           emoji: "🔓", tag: "Youth Growth", stars: 5 },
+        { title: "Miracles of Millionaire Mindset", author: "Sri Sasikumaar",           emoji: "💰", tag: "Mindset",      stars: 5 },
+        { title: "Heal Understand Grow",            author: "Priyadharshini Bhoopathy", emoji: "🌿", tag: "Wellness",     stars: 5 },
+        { title: "The Untold Secret of Success",    author: "Kirubhashini Jayakumar",   emoji: "🏆", tag: "Success",      stars: 5 }
+      ],
+      coupon: "SELF25", discount: "10% OFF on Self-Help titles",
+      stall: "DNA PUBLICATIONS", stallNo: "Hall B 143 & 144", hall: "Hall B"
+    },
+    spiritual: {
+      name: "Spiritual Explorer / ஆன்மீக ஆர்வலர்",
+      emoji: "🙏",
+      color: "#5c3a00",
+      desc: "You are reflective, peaceful, and deeply connected to a higher purpose. You seek wisdom, meaning, and the deeper truth of existence in every page! / நீங்கள் ஆன்மீக அமைதியை நோக்கி பயணிக்கிறீர்கள்!",
+      books: [
+        { title: "Dhasavadharam",                          author: "Arvind Seshadri",       emoji: "🕉",  tag: "Tamil Spiritual",  stars: 5 },
+        { title: "Aanmeega Saaral",                        author: "V.B. Manikandan",       emoji: "🙏", tag: "Tamil Spiritual",  stars: 5 },
+        { title: "Cuddalore Maavattath Thevarath Thiruthalangal", author: "Neyvasal Nedunchezhiyan", emoji: "🪔", tag: "Tamil Devotional", stars: 5 },
+        { title: "Thirukkural",                            author: "Thiruvalluvar",         emoji: "📿", tag: "Tamil Classic",     stars: 5 },
+        { title: "Man's Search for Meaning",               author: "Viktor Frankl",         emoji: "💫", tag: "Philosophy",        stars: 5 }
+      ],
+      coupon: "SPRT25", discount: "10% OFF on Spiritual titles",
+      stall: "DNA PUBLICATIONS", stallNo: "Hall B 143 & 144", hall: "Hall B"
+    },
+    romance: {
+      name: "Romance Reader / காதல் வாசகர்",
+      emoji: "💖",
+      color: "#8b1a4a",
+      desc: "You are warm-hearted, emotional, and deeply connected to the people around you. Love, relationships, and heartfelt stories move you the most! / நீங்கள் அன்பும் உணர்வும் நிறைந்தவர்!",
+      books: [
+        { title: "Suttu Vizhi Kandale Sokkuthadi Thannale", author: "Mohana Manikandan",  emoji: "👀", tag: "Tamil Romance",   stars: 5 },
+        { title: "En Aasai Manaivi",                        author: "Divyashobana",       emoji: "💌", tag: "Tamil Romance",   stars: 5 },
+        { title: "Me Before You",                           author: "Jojo Moyes",         emoji: "💕", tag: "Emotional",       stars: 5 },
+        { title: "Ponniyin Selvan",                         author: "Kalki Krishnamurthy",emoji: "⚔",  tag: "Tamil Classic",   stars: 5 },
+        { title: "The Fault in Our Stars",                  author: "John Green",         emoji: "⭐", tag: "Young Adult",     stars: 5 }
+      ],
+      coupon: "LOVE25", discount: "10% OFF on Romance titles",
+      stall: "DNA PUBLICATIONS", stallNo: "Hall B 143 & 144", hall: "Hall B"
+    },
+    fantasy: {
+      name: "Fantasy Explorer / கற்பனை வாசகர்",
+      emoji: "🧙",
+      color: "#4a1a6b",
+      desc: "You are imaginative, creative, and believe in the impossible. Magical worlds, mythical creatures, and epic adventures are your reading paradise! / நீங்கள் கற்பனை உலகில் வாழ விரும்புகிறீர்கள்!",
+      books: [
+        { title: "Rangeela Rathiyazhage!",    author: "Thigalini",        emoji: "🌈", tag: "Tamil Fantasy",  stars: 5 },
+        { title: "From Silence to Confidence", author: "Dr. Tissaa Tony C", emoji: "🦋", tag: "Tamil Growth",   stars: 5 },
+        { title: "The Hobbit",                author: "J.R.R. Tolkien",  emoji: "🗺",  tag: "High Fantasy",   stars: 5 },
+        { title: "Mistborn",                  author: "Brandon Sanderson",emoji: "💨", tag: "Magic System",   stars: 5 },
+        { title: "The Lion, the Witch and the Wardrobe", author: "C.S. Lewis", emoji: "🦁", tag: "Classic",   stars: 5 }
+      ],
+      coupon: "FANT25", discount: "10% OFF on Fantasy titles",
+      stall: "DNA PUBLICATIONS", stallNo: "Hall B 143 & 144", hall: "Hall B"
     }
   };
 
-  /* ── STATE ── */
-  var state = { name:"", email:"", phone:"", currentQ:0, answers:[], selectedChoice:null, resultGenre:null };
+  /* ══ SHEET URL ══ */
+  var SHEET_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL';
+  function saveToSheet(data) {
+    if (SHEET_URL === 'YOUR_GOOGLE_APPS_SCRIPT_URL') return;
+    fetch(SHEET_URL, {
+      method: 'POST', mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    }).catch(function(e){ console.warn('Sheet error:', e); });
+  }
 
-  /* ── HELPERS ── */
+  /* ══ STATE ══ */
+  var totalQ = questions.length;
+  var state = { name:'', email:'', phone:'', currentQ:0, answers:[], selectedChoice:null, resultGenre:null };
+
+  /* ══ HELPERS ══ */
   function goToScreen(id) {
     document.querySelectorAll('.screen').forEach(function(s){ s.classList.remove('active'); });
     document.getElementById(id).classList.add('active');
     window.scrollTo(0, 0);
   }
 
-  /* ── QR CODE ── */
+  /* ══ QR CODE ══ */
   var url = window.location.href;
   document.getElementById('qr-url-label').textContent = url;
   try {
     new QRCode(document.getElementById('qrcode'), {
       text: url, width: 200, height: 200,
-      colorDark: "#1a1208", colorLight: "#ffffff",
+      colorDark: '#1a1208', colorLight: '#ffffff',
       correctLevel: QRCode.CorrectLevel.M
     });
   } catch(e) {
     document.getElementById('qrcode').textContent = 'QR unavailable in preview';
   }
 
-  /* ── BUTTON LISTENERS ── */
-  document.getElementById('btn-start').addEventListener('click', function(){
-    goToScreen('screen-register');
-  });
+  /* ══ LISTENERS ══ */
+  document.getElementById('btn-start').addEventListener('click',   function(){ goToScreen('screen-register'); });
+  document.getElementById('btn-register').addEventListener('click', function(){ submitRegistration(); });
+  document.getElementById('next-btn').addEventListener('click',    function(){ nextQuestion(); });
+  document.getElementById('result-pill').addEventListener('click', function(){ goToBooks(); });
+  document.getElementById('btn-coupon').addEventListener('click',  function(){ goToCoupon(); });
+  document.getElementById('btn-copy').addEventListener('click',    function(){ copyCoupon(); });
+  document.getElementById('btn-restart').addEventListener('click', function(){ restart(); });
 
-  document.getElementById('btn-register').addEventListener('click', function(){
-    submitRegistration();
-  });
-
-  document.getElementById('next-btn').addEventListener('click', function(){
-    nextQuestion();
-  });
-
-  document.getElementById('result-pill').addEventListener('click', function(){
-    goToBooks();
-  });
-
-  document.getElementById('btn-coupon').addEventListener('click', function(){
-    goToCoupon();
-  });
-
-  document.getElementById('btn-copy').addEventListener('click', function(){
-    copyCoupon();
-  });
-
-  document.getElementById('btn-restart').addEventListener('click', function(){
-    restart();
-  });
-
-  /* ── REGISTRATION ── */
+  /* ══ REGISTRATION ══ */
   function submitRegistration() {
     var name  = document.getElementById('reg-name').value.trim();
     var email = document.getElementById('reg-email').value.trim();
     var phone = document.getElementById('reg-phone').value.trim();
     var valid = true;
-
-    document.getElementById('err-name').textContent  = '';
-    document.getElementById('err-email').textContent = '';
-    document.getElementById('err-phone').textContent = '';
-    ['reg-name','reg-email','reg-phone'].forEach(function(id){
-      document.getElementById(id).classList.remove('error');
-    });
+    ['err-name','err-email','err-phone'].forEach(function(id){ document.getElementById(id).textContent = ''; });
+    ['reg-name','reg-email','reg-phone'].forEach(function(id){ document.getElementById(id).classList.remove('error'); });
 
     if (!name) {
-      document.getElementById('err-name').textContent = 'Please enter your name.';
-      document.getElementById('reg-name').classList.add('error');
-      valid = false;
+      document.getElementById('err-name').textContent = 'Please enter your name / பெயர் உள்ளிடுக';
+      document.getElementById('reg-name').classList.add('error'); valid = false;
     }
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      document.getElementById('err-email').textContent = 'Enter a valid email address.';
-      document.getElementById('reg-email').classList.add('error');
-      valid = false;
+      document.getElementById('err-email').textContent = 'Enter a valid email / சரியான மின்னஞ்சல் உள்ளிடுக';
+      document.getElementById('reg-email').classList.add('error'); valid = false;
     }
     if (!phone || !/^[\d\s+\-()\\.]{7,15}$/.test(phone)) {
-      document.getElementById('err-phone').textContent = 'Enter a valid phone number.';
-      document.getElementById('reg-phone').classList.add('error');
-      valid = false;
+      document.getElementById('err-phone').textContent = 'Enter a valid phone number / சரியான எண் உள்ளிடுக';
+      document.getElementById('reg-phone').classList.add('error'); valid = false;
     }
     if (!valid) return;
 
     state.name = name; state.email = email; state.phone = phone;
     state.currentQ = 0; state.answers = []; state.selectedChoice = null;
-    document.getElementById('quiz-user-label').textContent = 'Hello, ' + name.split(' ')[0] + '! 10 Questions Await';
+    document.getElementById('quiz-user-label').textContent = 'Hello ' + name.split(' ')[0] + '! ' + totalQ + ' Questions Await';
     renderQuestion();
     goToScreen('screen-quiz');
   }
 
-  /* ══ PASTE YOUR GOOGLE APPS SCRIPT URL BELOW ══
-     Replace the text inside the quotes with your URL.
-     Example: 'https://script.google.com/macros/s/ABC123.../exec'
-  ════════════════════════════════════════════════ */
-  var SHEET_URL = 'https://script.google.com/macros/s/AKfycbyP7VXKpD_wAby2fXidv_MUtdvrqZbgesCKjQq4J6ryUUP08rMI0c1YekqESj5UjV0h/exec';
-
-  function saveToSheet(data) {
-    if (SHEET_URL === 'YOUR_GOOGLE_APPS_SCRIPT_URL') return; // skip until URL is set
-    fetch(SHEET_URL, {
-      method: 'POST',
-      mode: 'no-cors',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
-    }).catch(function(err){ console.warn('Sheet save failed:', err); });
-  }
-
-  /* ── QUIZ ── */
+  /* ══ QUIZ ══ */
   function renderQuestion() {
     var q = questions[state.currentQ];
     document.getElementById('question-text').textContent = (state.currentQ + 1) + '. ' + q.q;
-    document.getElementById('progress-fill').style.width = (((state.currentQ + 1) / 10) * 100) + '%';
-    document.getElementById('progress-label').textContent = (state.currentQ + 1) + ' / 10';
+    document.getElementById('progress-fill').style.width = (((state.currentQ + 1) / totalQ) * 100) + '%';
+    document.getElementById('progress-label').textContent = (state.currentQ + 1) + ' / ' + totalQ;
     document.getElementById('next-btn').disabled = true;
     state.selectedChoice = null;
 
@@ -615,9 +640,7 @@
       span.textContent = letters[i];
       btn.appendChild(span);
       btn.appendChild(document.createTextNode(c.text));
-      btn.addEventListener('click', function(){
-        selectChoice(c.genre, btn);
-      });
+      btn.addEventListener('click', function(){ selectChoice(c.genre, btn); });
       container.appendChild(btn);
     });
   }
@@ -632,7 +655,7 @@
   function nextQuestion() {
     if (!state.selectedChoice) return;
     state.answers.push(state.selectedChoice);
-    if (state.currentQ < questions.length - 1) {
+    if (state.currentQ < totalQ - 1) {
       state.currentQ++;
       renderQuestion();
     } else {
@@ -640,91 +663,83 @@
     }
   }
 
-  /* ── RESULT ── */
+  /* ══ RESULT ══ */
   function computeResult() {
-    var tally = { mystery:0, fantasy:0, biography:0, thriller:0 };
-    state.answers.forEach(function(g){ tally[g]++; });
+    var tally = { mystery:0, thriller:0, selfhelp:0, spiritual:0, romance:0, fantasy:0 };
+    state.answers.forEach(function(g){ if(tally[g] !== undefined) tally[g]++; });
     var top = Object.keys(tally).reduce(function(a,b){ return tally[a] >= tally[b] ? a : b; });
     state.resultGenre = top;
     var g = genres[top];
 
     document.getElementById('result-emoji').textContent = g.emoji;
-    document.getElementById('result-name').textContent = state.name.split(' ')[0];
+    document.getElementById('result-name').textContent  = state.name.split(' ')[0];
     document.getElementById('result-genre').textContent = g.name;
-    document.getElementById('result-desc').textContent = g.desc;
+    document.getElementById('result-desc').textContent  = g.desc;
 
     var pill = document.getElementById('result-pill');
-    pill.textContent = '📚 Explore ' + g.name + ' Books →';
+    pill.textContent = '📚 Explore ' + g.name + ' Books';
     pill.style.background = 'linear-gradient(135deg,' + g.color + ',' + g.color + 'cc)';
 
-    saveToSheet({ name: state.name, email: state.email, phone: state.phone, timestamp: new Date().toISOString(), genre: g.name });
+    saveToSheet({ name: state.name, email: state.email, phone: state.phone,
+                  timestamp: new Date().toISOString(), genre: g.name });
     goToScreen('screen-result');
   }
 
-  /* ── BOOKS ── */
+  /* ══ BOOKS ══ */
   function goToBooks() {
     var g = genres[state.resultGenre];
     document.getElementById('books-subtitle').textContent = 'Top 5 ' + g.name + ' Picks';
-    document.getElementById('books-heading').textContent = 'Your top reads as a ' + g.name + ':';
+    document.getElementById('books-heading').textContent  = 'Your must-reads:';
 
     var list = document.getElementById('books-list');
     list.innerHTML = '';
     var bgColors = ['#fff3d6','#f0e8ff','#e8f5e9','#fce8e8','#e8f0fe'];
     g.books.forEach(function(b, i){
       var stars = '★'.repeat(b.stars) + '☆'.repeat(5 - b.stars);
-      var item = document.createElement('div');
+      var item  = document.createElement('div');
       item.className = 'book-item';
       item.innerHTML =
         '<div class="book-rank">#' + (i+1) + '</div>' +
         '<div class="book-cover" style="background:' + bgColors[i] + '">' + b.emoji + '</div>' +
         '<div class="book-info">' +
-          '<div class="book-title">' + b.title + '</div>' +
+          '<div class="book-title">'  + b.title  + '</div>' +
           '<div class="book-author">by ' + b.author + '</div>' +
-          '<div class="stars">' + stars + '</div>' +
-          '<div class="book-tag">' + b.tag + '</div>' +
+          '<div class="stars">'  + stars  + '</div>' +
+          '<div class="book-tag">'  + b.tag   + '</div>' +
         '</div>';
       list.appendChild(item);
     });
     goToScreen('screen-books');
   }
 
-  /* ── COUPON ── */
+  /* ══ COUPON ══ */
   function goToCoupon() {
     var g = genres[state.resultGenre];
-    document.getElementById('coupon-code').textContent = g.coupon;
+    document.getElementById('coupon-code').textContent     = g.coupon;
     document.getElementById('coupon-discount').textContent = g.discount;
-    document.getElementById('stall-name').textContent = g.stall;
-    document.getElementById('stall-number').textContent = g.stallNo;
-    document.getElementById('stall-hall').textContent = g.hall;
-    document.getElementById('final-name').textContent = state.name.split(' ')[0];
+    document.getElementById('final-name').textContent      = state.name.split(' ')[0];
     goToScreen('screen-coupon');
   }
 
   function copyCoupon() {
     var code = document.getElementById('coupon-code').textContent;
-    var btn = document.getElementById('btn-copy');
+    var btn  = document.getElementById('btn-copy');
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(code).then(function(){
-        btn.textContent = 'Copied!';
+        btn.textContent = '✅ Copied!';
         setTimeout(function(){ btn.textContent = '📋 Copy Code'; }, 2000);
-      }).catch(function(){ alert('Coupon code: ' + code); });
-    } else {
-      alert('Coupon code: ' + code);
-    }
+      }).catch(function(){ alert('Coupon: ' + code); });
+    } else { alert('Coupon: ' + code); }
   }
 
-  /* ── RESTART ── */
+  /* ══ RESTART ══ */
   function restart() {
     state = { name:'', email:'', phone:'', currentQ:0, answers:[], selectedChoice:null, resultGenre:null };
-    document.getElementById('reg-name').value = '';
-    document.getElementById('reg-email').value = '';
-    document.getElementById('reg-phone').value = '';
+    ['reg-name','reg-email','reg-phone'].forEach(function(id){ document.getElementById(id).value = ''; });
     goToScreen('screen-register');
   }
 
-  /* init quiz render so it's ready */
   renderQuestion();
-
 })();
 </script>
 </body>
